@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: localhost
--- Létrehozás ideje: 2020. Már 31. 14:53
+-- Létrehozás ideje: 2020. Ápr 14. 21:17
 -- Kiszolgáló verziója: 10.1.38-MariaDB
 -- PHP verzió: 7.3.2
 
@@ -25,27 +25,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Tábla szerkezet ehhez a táblához `posts`
---
-
-CREATE TABLE `posts` (
-  `id` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL,
-  `title` varchar(255) NOT NULL,
-  `body` text NOT NULL,
-  `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- A tábla adatainak kiíratása `posts`
---
-
-INSERT INTO `posts` (`id`, `user_id`, `title`, `body`, `created_at`) VALUES
-(0, 2, 'Ez egy teszt poszt', 'Asd', '2020-03-31 14:43:23');
-
--- --------------------------------------------------------
-
---
 -- Tábla szerkezet ehhez a táblához `users`
 --
 
@@ -62,7 +41,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `created_at`) VALUES
-(2, 'Viki Szalai', 'viki@email.hu', '$2y$10$N069lG84UWgjO4Nux2qWjO2iph1S.PzhueZ0MJoOVqdFuEKzvPHPy', '2020-03-30 15:22:05');
+(1, '', 'admin@email.hu', '$2y$10$gkLk1GcXgdO9SkvuIkvy2em.A3ra0eC47TfrRgFUyNwpgmfDhrgz.', '2020-04-14 21:07:15');
 
 --
 -- Indexek a kiírt táblákhoz
@@ -82,7 +61,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT a táblához `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
