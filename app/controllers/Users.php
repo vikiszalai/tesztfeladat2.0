@@ -27,7 +27,7 @@ class Users extends Controller
 
 
       if (empty($data['email'])) {
-        $data['email_err'] = 'Kérlek adjon meg email címet!';
+        $data['email_err'] = 'Kérem adjon meg email címet!';
       } else {
 
         if ($this->userModel->findUserByEmail($data['email'])) {
@@ -36,14 +36,14 @@ class Users extends Controller
       }
 
       if (empty($data['password'])) {
-        $data['password_err'] = 'Kérlek adj meg jelszót!';
+        $data['password_err'] = 'Kérem adjon meg jelszót!';
       } elseif (strlen($data['password']) < 6) {
         $data['password_err'] = 'A jelszónak minimum 6 karakternek kell lennie!';
       }
 
 
       if (empty($data['confirm_password'])) {
-        $data['confirm_password_err'] = 'Kérlek erősítse meg a jelszavát!';
+        $data['confirm_password_err'] = 'Kérem erősítse meg jelszavát!';
       } else {
         if ($data['password'] != $data['confirm_password']) {
           $data['confirm_password_err'] = 'A jelszavak nem egyeznek';
@@ -79,7 +79,7 @@ class Users extends Controller
         'confirm_password_err' => ''
       ];
 
-      // Load view
+
       $this->view('users/register', $data);
     }
   }
@@ -101,11 +101,11 @@ class Users extends Controller
 
 
       if (empty($data['email'])) {
-        $data['email_err'] = 'Kérlek adjon meg emailt!';
+        $data['email_err'] = 'Kérem adjon meg emailt!';
       }
 
       if (empty($data['password'])) {
-        $data['password_err'] = 'Kérlek adjon meg jelszót!';
+        $data['password_err'] = 'Kérem adjon meg jelszót!';
       }
 
 
@@ -151,7 +151,7 @@ class Users extends Controller
     $_SESSION['user_id'] = $user->id;
     $_SESSION['user_email'] = $user->email;
     $_SESSION['user_name'] = $user->name;
-    redirect('posts');
+    redirect('pages');
   }
 
   public function logout()

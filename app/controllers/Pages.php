@@ -8,12 +8,12 @@ class Pages extends Controller
   public function index()
   {
     if (isLoggedIn()) {
-      redirect('posts');
+      redirect('pages/about');
     }
 
     $data = [
       'title' => 'Főoldal',
-      'description' => 'ez egy MVC frameworkon alapuló oldal'
+      'description' => 'Helló világ'
     ];
 
     $this->view('pages/index', $data);
@@ -23,7 +23,7 @@ class Pages extends Controller
   {
     $data = [
       'title' => 'Rólunk',
-      'description' => 'Rólunk'
+      'description' => 'Sikeres bejelentkezés'
     ];
 
     $this->view('pages/about', $data);

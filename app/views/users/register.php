@@ -23,7 +23,7 @@
 
         <div class="row">
           <div class="col">
-            <input type="submit" value="Register" class="btn btn-success btn-block">
+            <input type="submit" value="Regisztráció" class="btn btn-success btn-block">
           </div>
           <div class="col">
             <a href="<?php echo URLROOT; ?>/users/login" class="btn btn-light btn-block">Van már fiókja? Lépjen be</a>
